@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Datos - Profesor</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="js/validacion.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="main-container">
+            <form method="post" name="registrodocente" onsubmit="return validar(this)" action="RegistrarDocente" >  
+                <label> Nombre del docente </label>
+                <br>
+                <input type="text" name="nombre">
+                <br>
+                <label> Apellido Paterno </label>
+                <br>
+                <input type="text" name="appat"  >
+                <br>
+                <label> Apellido Materno </label>
+                <br>
+                <input type="text" name="apmat">
+                <br>
+                <label> Numero de Empleado </label>
+                <br>
+                <input type="text" name="noempleado"  >
+                <br>
+                <label> Fecha de Nacimiento </label>
+                <br>
+                <input type="text" name="fechanac"  >
+                <br>
+                <input type="submit" value="Registrar Datos" name="enviar" >
+                <br>
+                <input type="reset" value="Borrar Datos" >
+            </form>
+        </div>
+    </body>
+</html>
