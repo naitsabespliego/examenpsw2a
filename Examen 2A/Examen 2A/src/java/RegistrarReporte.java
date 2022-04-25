@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alumno
  */
-public class RegistrarDocente extends HttpServlet {
+public class RegistrarReporte extends HttpServlet {
 
     private Connection con;
     private Statement set;
@@ -97,26 +97,36 @@ public class RegistrarDocente extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Datos de Docente</title>");            
+            out.println("<title>Reporte</title>");            
             out.println("</head>");
             out.println("<body>");
             
             try{
-                String nom, appat, apmat, fecha, noemp;
+                String idlab, nomlab, idrep, fech, hor, prio, esta, fechrep, horrep, respo;
                 
-                nom = request.getParameter("nombre");
-                appat = request.getParameter("appat");
-                apmat = request.getParameter("apmat");
-                fecha = request.getParameter("fechanac");
-                noemp = request.getParameter("noempleado");
+                idlab = request.getParameter("id_lab");
+                nomlab = request.getParameter("nom_lab");
+                idrep = request.getParameter("id_reporte");
+                fech = request.getParameter("fecha");
+                hor = request.getParameter("hora");
+                prio = request.getParameter("prioridad");
+                fechrep = request.getParameter("fechrepre");
+                horrep = request.getParameter("horrepre");
+                respo = request.getParameter("responsable");
                 
                 //querry
-                String q = "insert into docentebatiz "
-                        + "values ("+noemp+", '"+nom+"', '"+appat+"', '"+apmat+"', '"+fecha+"')";
+                String q9 = "insert into Claboratorio "
+                        + "values ("+idlab+", '"+nomlab+"')";
+                
+                String q10 = "insert into Creporte "
+                        + "values ("+idrep+", '"+fech+"', '"+hor+"', '"+prio+"', '"+fechrep+"', '"+horrep+"', '"+respo+"')";
                                 
-                set.executeUpdate(q);
+                set.executeUpdate(q9);
+                
+                set.executeUpdate(q10);
+                
                 out.println("<h1>Registro Exitoso</h1>");
-                System.out.println("Se registro un nuevo docente para Reporte");
+                System.out.println("Se registro un nuevo Reporte");
                 
                 
                 
@@ -131,7 +141,7 @@ public class RegistrarDocente extends HttpServlet {
             
             
             
-            out.println("<a href='RegistroEquipo' >Datos del equipo</a>");
+            out.println("<a href='ConsultarReporte' >Consultar Reporte</a>");
             out.println("</body>");
             out.println("</html>");
         }

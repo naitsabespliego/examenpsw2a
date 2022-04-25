@@ -8,6 +8,14 @@
         <servlet-name>RegistroEquipo</servlet-name>
         <servlet-class>RegistroEquipo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistrarReporte</servlet-name>
+        <servlet-class>RegistrarReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarReporte</servlet-name>
+        <servlet-class>ConsultarReporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarDocente</servlet-name>
         <url-pattern>/RegistrarDocente</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>RegistroEquipo</servlet-name>
         <url-pattern>/RegistroEquipo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrarReporte</servlet-name>
+        <url-pattern>/RegistrarReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarReporte</servlet-name>
+        <url-pattern>/ConsultarReporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
