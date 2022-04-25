@@ -174,7 +174,7 @@ public class RegistroEquipo extends HttpServlet {
             
             
             
-            out.println("<a href='RegistrarReporte' >Datos del Registro</a>");
+            out.println("<a href='reporte.html' >Datos del Registro</a>");
             out.println("</body>");
             out.println("</html>");
         }

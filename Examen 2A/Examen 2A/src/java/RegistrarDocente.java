@@ -131,7 +131,7 @@ public class RegistrarDocente extends HttpServlet {
             
             
             
-            out.println("<a href='RegistroEquipo' >Datos del equipo</a>");
+            out.println("<a href='equipo.html' >Datos del equipo</a>");
             out.println("</body>");
             out.println("</html>");
         }
